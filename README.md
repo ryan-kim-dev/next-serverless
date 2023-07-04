@@ -1,34 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# nextjs 13버젼 app router 사용 연습
 
-## Getting Started
+참고자료: [Dave gray - Next.js Tutorial for Beginners | Next.js 13](https://www.youtube.com/playlist?list=PL0Zuz27SZ-6Pk-QJIdGd1tGZEzy9RTgtj)
 
-First, run the development server:
+## 1. nextjs 사용의 이점
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### 1.1 SSR 지원
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+서버사이드 렌더링을 지원하므로 pre-rendering된 페이지와 전체 내용이 채워진 HTML 문서를 제공할 수 있다. 이는 SEO에 유리하다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1.2 자동 코드 스플리팅
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+nextjs는 자동으로 코드를 작은 청크로 분할시키므로 사이트 로딩시간을 단축시켜준다.
 
-## Learn More
+### 1.3 SEO 최적화
 
-To learn more about Next.js, take a look at the following resources:
+SSR을 지원하므로 메타데이터가 전부 채워진 HTML 문서를 제공하여 SEO 최적화가 용이하다.
+물론 CSR에서도 SEO를 대응하기 위해 [algoria](https://www.algolia.com/)와 같은 서비스를 사용할 수 있지만, SSR을 지원하는 nextjs를 사용하는 것이 더 편리하다.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 1.4 개발환경 설정이 간편하다
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+nextjs는 webpack, babel, hot-reloading 등을 자동으로 설정해준다.
 
-## Deploy on Vercel
+### 1.5 타입스크립트 지원
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+nextjs는 타입스크립트를 빌트인 지원하므로 에러 발견과 코드 완성에 도움을 준다.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### 1.6 스케일링 용이
+
+코드 스플리팅, 캐싱, 서버리스 함수 등 다양한 기능을 제공하여 스케일링이 용이하다.
+
+## 2. pre-rendering 이란?
