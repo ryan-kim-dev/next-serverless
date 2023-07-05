@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-	title: '현호의 블로그',
+	title: '유저와 유저 포스트',
 	description: '넥스트13 앱라우터 연습하는 사이트',
 };
 
